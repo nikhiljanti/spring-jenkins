@@ -12,7 +12,7 @@ pipeline {
       steps {
         echo 'Testing the application'
         echo "Testing Version: ${NEW_VERSION}"
-        sh "maven test"
+        sh "mvn test"
       }
     }
     stage("deploy"){
