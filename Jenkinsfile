@@ -18,7 +18,7 @@ pipeline {
         // Using Groovy wrapper syntax
         withCredentials([usernamePassword(credentials: 'SERVER-CRED', usernameVariable: USER, passwordVariable: PWD)]{
           sh "USER: ${USER} PASSWORD: ${PWD}"
-        }
+        
       }
     }
   }
