@@ -16,7 +16,7 @@ pipeline {
         echo 'Deploying the application'
         //echo "Credentials: ${SERVER_CREDENTIALS}"
         // Using Groovy wrapper syntax
-        withCredentials([usernamePassword(credentials: 'SERVER-CRED', usernameVariable: USER, passwordVariable: PWD]){
+        withCredentials([usernamePassword(credentials: 'SERVER-CRED', usernameVariable: USER, passwordVariable: PWD)]{
           sh "USER: ${USER} PASSWORD: ${PWD}"
         }
       }
