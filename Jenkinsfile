@@ -21,7 +21,7 @@ pipeline {
       steps {
         echo 'Testing the application'
         echo "Version: ${NEW_VERSION}"
-        echo "Testing Version: ${VERSION}"
+//         echo "Testing Version: ${VERSION}"
         sh "mvn test"
       }
     }
