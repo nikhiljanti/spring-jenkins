@@ -14,10 +14,10 @@ pipeline {
     stage("deploy"){
       steps{
         echo 'Deploying the application'
-        withCredentials([
-          usernamePassword(credentials: 'SERVER-CRED', usernameVariable: USER, passwordVariable: PWD)]){
-          sh "USER: ${USER} Password: ${PWD}"
-        }
+        //withCredentials([
+         // usernamePassword(credentials: 'SERVER-CRED', usernameVariable: USER, passwordVariable: PWD)]){
+         // sh "USER: ${USER} Password: ${PWD}"
+        //}
       }
     }
   }
