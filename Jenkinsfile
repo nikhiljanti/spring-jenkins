@@ -32,6 +32,7 @@ pipeline {
          // usernamePassword(credentials: 'SERVER-CRED', usernameVariable: USER, passwordVariable: PWD)]){
          // sh "USER: ${USER} Password: ${PWD}"
         //}
+        sh "mvn build"
       }
     }
   }
