@@ -13,12 +13,12 @@ pipeline {
   }
   stages {
     stage("test") {
-      steps {
-        when{
+       when{
           expression{
             params.executeTests
           }
         }
+      steps {
         echo 'Testing the application'
         echo "Version: ${NEW_VERSION}"
         echo "Testing Version: ${VERSION}"
