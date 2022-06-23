@@ -7,11 +7,21 @@ pipeline {
   tools{
     maven 'maven'
   }
+  parameters{
+    choice(name: 'VERSION', choices: [1.0.0, 1.0.1, 1.0.2], description: '' )
+    booleanParam(name: 'executeTests', defaultValue: true, description: '')
+  }
   stages {
     stage("test") {
       steps {
+        when{
+          expression{
+            params.executeTests
+          }
+        }
         echo 'Testing the application'
-        echo "Testing Version: ${NEW_VERSION}"
+        echo "Version: ${NEW_VERSION}"
+        echo "Testing Version: ${VERSION}"
         sh "mvn test"
       }
     }
