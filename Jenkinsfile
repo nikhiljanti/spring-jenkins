@@ -6,5 +6,8 @@ pipeline {
         echo 'Testing the application'
       }
     }
+    stage("deploy"){
+      echo 'Deploying the application'
+    }
   }
 }
