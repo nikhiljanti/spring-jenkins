@@ -8,7 +8,7 @@ public class Controller {
 	
 	@GetMapping("/index")
 	public String showData() {
-		return "Welcome to Spring - Jenkins...!";
+		return "Welcome to Spring Jenkins...!";
 	}
 
 }
