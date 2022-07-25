@@ -6,7 +6,7 @@ pipeline{
                 echo 'Initiating the spring-jenkins project.'
             }
         }
-        stage("Build"{)
+        stage("Build"){
             steps{
                 echo 'Building the spring-jenkins project.'
             }
